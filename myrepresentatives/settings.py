@@ -64,7 +64,7 @@ ROOT_URLCONF = 'myrepresentatives.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'public/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
