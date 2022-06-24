@@ -1,0 +1,103 @@
+.individualRep-box {
+
+    height: auto;
+    width: auto;
+    border-radius: 3%;
+    border-color: rgba(0, 0, 0, 0.356);
+    border-width: 1px;
+    background-color:rgba(213, 229, 241, 0.527);
+
+    border-style:none;
+    box-shadow: 5px 5px 15px 10px #0000002a;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.rep-name-row {
+
+}
+.rep-name {
+    
+}
+.rep-pic-row {
+    height: auto;
+}
+.rep-pic {
+    max-width:100%;
+    max-height:100%;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.rep-info-row {
+    height: auto;
+}
+
+.rep-name-row {
+
+} 
+
+.rep-pic-row {
+
+}
+
+.rep-party-and-state-row{
+
+}
+
+.rep-next-election-row {
+ 
+}
+
+.rep-contact-row {
+
+}
+
+.rep-links-row {
+
+
+}
+
+.rep-votes-row {
+    margin-bottom:0;
+}
+
+.links {
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  
+    
+  
+}
+.rep-website {
+ 
+   
+    display:inline-block;
+}   
+
+.rep-twitter {
+    display:inline-block;
+   
+  
+}
+
+.rep-facebook {
+    display:inline-block;
+ 
+
+}
+
+.rep-youtube {
+    display:inline-block;
+
+ 
+ 
+}
