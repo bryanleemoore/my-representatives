@@ -9,11 +9,12 @@ function App()
 {
   const [constituent, setConstituent] = useState(null);
 
-  <div className="nav-bar">
-  <button className = 'back-button'><img className = 'back-button-image' src={backIcon} alt="my image" onClick={() => setConstituent(null)} /></button>  
-  </div>
+
   return (
     <div className="App">
+        <div className="nav-bar">
+  <button className = 'back-button'><img className = 'back-button-image' src={backIcon} alt="my image" onClick={() => setConstituent(null)} /></button>  
+  </div>
       {constituent ?   
         <div className="nav-bar">
           <div className = "back-button-column"><button className = 'back-button'><img className = 'back-button-image' src={backIcon} alt="my image" onClick={() => setConstituent(null)} /></button>  
