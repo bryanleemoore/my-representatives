@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'myrepresentatives',
     'backend.apps.BackendConfig',
+    'frontend.apps.FrontendConfig',
     'whitenoise.runserver_nostatic'
 ]
 
