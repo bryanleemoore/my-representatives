@@ -64,7 +64,7 @@ ROOT_URLCONF = 'myrepresentatives.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'public')],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,8 +134,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'public/build','staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'build','staticfiles')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'public/build/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'build/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
