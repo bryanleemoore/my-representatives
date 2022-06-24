@@ -20,5 +20,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('backend/', include('backend.urls')),
-    path('', include('index.html')),
+    path('',include('public.urls')),
 ]
