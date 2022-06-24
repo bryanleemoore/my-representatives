@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django.contrib.staticfiles',
     'rest_framework',
+    'myrepresentatives',
     'backend.apps.BackendConfig',
 ]
 
