@@ -1,0 +1,17 @@
+.allRep-box {
+    
+  width: 100%;
+  display: flex;
+  margin-top:50px;
+  gap: 50px;
+  align-items: center;
+  height:fit-content;
+  position:relative;
+  flex-direction: row;
+
+    padding-left: 85px;
+    padding-right: 85px;
+
+
+    background-color: white;
+  }
