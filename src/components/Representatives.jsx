@@ -26,7 +26,7 @@ export default class Representatives extends Component
     let payload = {'address': this.props.constituent}
 
     const params = new URLSearchParams(payload);
-    console.log('bing4523523')
+    console.log('bing4523523 322 6666')
     let res = await axios.get(
       `https://my-representatives.herokuapp.com/representatives?${params}`)
   console.log(res);
