@@ -81,8 +81,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myrepresentatives.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://my-representatives.herokuapp.com/"
 ]
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
