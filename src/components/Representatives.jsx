@@ -28,7 +28,7 @@ export default class Representatives extends Component
     const params = new URLSearchParams(payload);
     console.log('bing4523523')
     let res = await axios.get(
-      `http://127.0.0.1:8000/backend/representatives?${params}`)
+      `https://my-representatives.herokuapp.com/representatives?${params}`)
   console.log(res);
       this.setState({houserep : {
         district: res.data.house.district, 

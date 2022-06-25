@@ -33,7 +33,7 @@ export default class Votes extends Component
         const params = new URLSearchParams(payload);
   
         let res = await axios.get(
-          `http://127.0.0.1:8000/backend/votes?${params}`)
+          `https://my-representatives.herokuapp.com/backend/votes?${params}`)
         
         this.setState({votes : res.data.results[0].votes})
     }

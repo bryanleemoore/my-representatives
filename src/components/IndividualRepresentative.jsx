@@ -50,12 +50,12 @@ export default class IndividualRepresentative extends Component
         var params = new URLSearchParams(payload);
   
         let resMemberID = await axios.get(
-          `http://127.0.0.1:8000/backend/memberID?${params}`)
+          `https://my-representatives.herokuapp.com/backend/memberID?${params}`)
         
 
         var payload = {'memberID' : resMemberID.data}
         var params = new URLSearchParams(payload);
-        let resInfo = await axios.get(`http://127.0.0.1:8000/backend/info?${params}`)
+        let resInfo = await axios.get(`https://my-representatives.herokuapp.com/backend/info?${params}`)
   
     
         this.setState({memberID : resMemberID.data, info : resInfo.data.results[0]})
