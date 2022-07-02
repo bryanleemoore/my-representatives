@@ -35,7 +35,7 @@ export default class IndividualRepresentative extends Component
         const firstname = name[0]
         const lastname = name[name.length -1]
 
-        console.log(firstname, lastname, this.props.representative.ocd_id)
+        
         var chamber = ''
         if(this.props.representative.title == 'U.S. Representative')
         {

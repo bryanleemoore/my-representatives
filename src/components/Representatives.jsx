@@ -26,10 +26,10 @@ export default class Representatives extends Component
     let payload = {'address': this.props.constituent}
 
     const params = new URLSearchParams(payload);
-    console.log('bing4523523 322 6666')
+ 
     let res = await axios.get(
       `https://my-representatives.herokuapp.com/backend/representatives?${params}`)
-  console.log(res);
+
       this.setState({houserep : {
         district: res.data.house.district, 
         official: res.data.house.officials[0],
@@ -48,15 +48,13 @@ export default class Representatives extends Component
       }})
 
 
-      console.log(this.state.houserep)
-      console.log(this.state.senator1)
-      console.log(this.state.senator2)
+
   
     
   }
   componentDidMount() 
   {
-    console.log('bing')
+  
     this.GetRepNames() 
   }
   componentDidUpdate() 

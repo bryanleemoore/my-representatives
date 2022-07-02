@@ -18,7 +18,7 @@ export default class Votes extends Component
         {
             this.getVotes();
         }
-        console.log(this.state.votes)
+
     }
     componentDidUpdate() 
     {
@@ -83,13 +83,12 @@ export default class Votes extends Component
           r[a.date].push(a);
           return r;
       }, Object.create(null));
-      console.log('TEST!')
-      console.log(result);
+
       var bills = []
       for(var day in result)
       {
           var billsOnDay = []
-          console.log(result[day])
+     
           for(var element in result[day]) 
           {
             element = result[day][element]
@@ -129,7 +128,7 @@ export default class Votes extends Component
             </div></div>)
       }
 
-        console.log(bills);
+ 
         return <div className="bills">{bills}</div>;
     }
     render()
