@@ -3,6 +3,11 @@ from rest_framework.views import APIView
 import requests
 from rest_framework import status
 from rest_framework.response import Response
+import environ 
+import os
+
+civic_key = (os.environ.get("CIVIC_KEY", 'dev default value'))
+prop_key = (os.environ.get("PROP_KEY", 'dev default value'))
 
 class Representatives(APIView):
 
@@ -13,8 +18,8 @@ class Representatives(APIView):
         print('-----------')
         print(address)
 
-        houseParams = {'key': 'AIzaSyD7tk470iaiGU7_lg8ouUWltT9oNz6BRQg', 'address' : address, 'roles' : 'legislatorLowerBody', 'levels': 'country'}
-        senatorParams = {'key': 'AIzaSyD7tk470iaiGU7_lg8ouUWltT9oNz6BRQg', 'address' : address, 'roles' : 'legislatorUpperBody', 'levels': 'country'}
+        houseParams = {'key': civic_key, 'address' : address, 'roles' : 'legislatorLowerBody', 'levels': 'country'}
+        senatorParams = {'key': civic_key, 'address' : address, 'roles' : 'legislatorUpperBody', 'levels': 'country'}
 
         house = requests.get('https://www.googleapis.com/civicinfo/v2/representatives', params=houseParams)
         senators = requests.get('https://www.googleapis.com/civicinfo/v2/representatives', params=senatorParams)
@@ -76,7 +81,7 @@ class MemberID(APIView):
 
         if chamber == 'senate':
             url = 'https://api.propublica.org/congress/v1/117/senate/members.json'
-            headers = {'X-API-Key': 'KebdXylUWha5lp4dSQUpqzX5FEho6vyckMddoIol'}
+            headers = {'X-API-Key': prop_key}
 
             members = requests.get(url, headers=headers)
             members = members.json()
@@ -89,7 +94,7 @@ class MemberID(APIView):
                             return Response(z['id'], status=status.HTTP_200_OK)
         else:
             url = 'https://api.propublica.org/congress/v1/117/house/members.json'
-            headers = {'X-API-Key': 'KebdXylUWha5lp4dSQUpqzX5FEho6vyckMddoIol'}
+            headers = {'X-API-Key': prop_key}
 
             members = requests.get(url, headers=headers)
             members = members.json()
@@ -113,7 +118,7 @@ class Votes(APIView):
     def get(self, request, format=None):
 
         url = 'https://api.propublica.org/congress/v1/members/' + request.GET.get('memberID') + '/votes.json'
-        headers = {'X-API-Key': 'KebdXylUWha5lp4dSQUpqzX5FEho6vyckMddoIol'}
+        headers = {'X-API-Key': prop_key}
 
         votes = requests.get(url, headers=headers)    
 
@@ -133,7 +138,7 @@ class Information(APIView):
     def get(self, request, format=None):
 
         url = 'https://api.propublica.org/congress/v1/members/' + request.GET.get('memberID') + '.json'
-        headers = {'X-API-Key': 'KebdXylUWha5lp4dSQUpqzX5FEho6vyckMddoIol'}
+        headers = {'X-API-Key': prop_key}
 
         info = requests.get(url, headers=headers)    
 
